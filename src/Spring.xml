@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<bean id="triangle" class="org.atul.model.Triangle">
+</bean>              
+<bean id="circle" class="org.atul.model.Circle">
+</bean>
+<bean id="shape" class="org.atul.model.Triangle" autowire="byName">
+<property name="id" value="1"/>
+<property name="name" value="Equilateral"/>
+</bean>   
+<bean id="pointA" class="org.atul.model.Point">
+<property name="x" value="0"/>
+<property name="y" value="0"/>
+</bean>
+<bean id="pointB" class="org.atul.model.Point">
+<property name="x" value="-20"/>
+<property name="y" value="0"/>
+</bean>
+<bean id="pointC" class="org.atul.model.Point">
+<property name="x" value="0"/>
+<property name="y" value="20"/>
+</bean>
+<bean id="loggingAspect" class="org.atul.aspect.LoggingAspect"></bean>    
+<bean id="jdbcDaoImpl" class="org.atul.repository.JdbcDaoImpl"></bean>                      
+</beans>
