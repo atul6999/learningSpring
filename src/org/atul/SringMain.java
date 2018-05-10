@@ -25,10 +25,10 @@ public class SringMain {
 	 */
 	public static void main(String[] args) {
 		context = new ClassPathXmlApplicationContext("Spring.xml");
-//		Shape shape = (Shape)context.getBean("shape");
-//		shape.draw();
-//		System.out.println(shape.toString());
-		JdbcDaoImpl jdbcDaoImpl = context.getBean("jdbcDaoImpl",JdbcDaoImpl.class);
-		jdbcDaoImpl.getCircle(1).getId();
+		Shape shape = (Shape)context.getBean("shape");
+		shape.draw();
+		System.out.println(shape.toString());
+//		JdbcDaoImpl jdbcDaoImpl = context.getBean("jdbcDaoImpl",JdbcDaoImpl.class);
+//		System.out.println(jdbcDaoImpl.getCircle(1).getId());
 	}
 }

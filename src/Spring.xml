@@ -6,10 +6,17 @@
 </bean>              
 <bean id="circle" class="org.atul.model.Circle">
 </bean>
-<bean id="shape" class="org.atul.model.Triangle" autowire="byName">
+<!-- <bean id="shape" class="org.atul.model.Triangle" autowire="byName">
 <property name="id" value="1"/>
 <property name="name" value="Equilateral"/>
-</bean>   
+</bean> -->   
+<bean id="shape" class="org.atul.model.Triangle">
+<property name="id" value="1"/>
+<property name="name" value="Equilateral"/>
+<property name="pointA" ref="pointA"/>
+<property name="pointB" ref="pointB"/>
+<property name="pointC" ref="pointC"/>
+</bean>
 <bean id="pointA" class="org.atul.model.Point">
 <property name="x" value="0"/>
 <property name="y" value="0"/>
