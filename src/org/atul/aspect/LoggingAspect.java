@@ -24,7 +24,6 @@ public class LoggingAspect {
 	}
 	
 	@Pointcut("execution(* get*())")
-	public void allGettersProxyMethod() {
-		
+	public void allGettersProxyMethod() {	
 	}
 }
